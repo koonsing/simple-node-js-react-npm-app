@@ -11,8 +11,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'pwd'
-                sh 'npm install'
+                sh 'whoami'
+                sh 'npm cache clean -f'
+                sh  'npm install -g n '
+                
             }
         }
         stage('Test') {
