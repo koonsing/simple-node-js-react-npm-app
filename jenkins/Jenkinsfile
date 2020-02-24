@@ -12,10 +12,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'whoami'
-                sh 'npm cache clean -f'
                 sh  'npm install -g n '
-                sh  'npm install'
-                sh  "npm install @babel/core --save"
+                sh  'npm install @babel/core --save'
                 
             }
         }
